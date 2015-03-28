@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MCItem : NSObject
+@interface MCItem : NSObject <NSCoding>
 {
     NSString *_itemName;
     NSString *_serialNumber;
