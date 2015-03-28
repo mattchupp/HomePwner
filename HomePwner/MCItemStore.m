@@ -60,7 +60,8 @@
 
 - (MCItem *)createItem {
     
-    MCItem *item = [MCItem randomItem];
+    //MCItem *item = [MCItem randomItem];
+    MCItem *item = [[MCItem alloc] init];
     
     [self.privateItems addObject:item];
     
