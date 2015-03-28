@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MCItemsViewController.h"
+#import "MCItemStore.h"
 
 @interface AppDelegate ()
 
@@ -43,6 +44,16 @@
     return YES;
 }
 
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    
+    BOOL success = [[MCItemStore sharedStore] saveChanges];
+    if (success) {
+        NSLog(@"Saved all of the MCItems");
+    } else {
+        NSLog(@"Cound not save any of the MCItems");
+    }
+    
+}
 
 
 @end
