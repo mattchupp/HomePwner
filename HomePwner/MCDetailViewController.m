@@ -9,6 +9,7 @@
 #import "MCDetailViewController.h"
 #import "MCItem.h"
 #import "MCImageStore.h"
+#import "MCItemStore.h"
 
 @interface MCDetailViewController ()
     <UINavigationControllerDelegate, UIImagePickerControllerDelegate,
@@ -254,6 +255,48 @@
                                          duration:(NSTimeInterval)duration {
     [self prepareViewsForOrientation:toInterfaceOrientation];
 }
+
+- (instancetype)initForNewItem:(BOOL)isNew {
+    
+    self = [super initWithNibName:nil bundle:nil];
+    
+    if (self) {
+        if (isNew) {
+            UIBarButtonItem *doneItem = [[UIBarButtonItem alloc]
+                                         initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                              target:self
+                                                              action:@selector(save:)];
+            self.navigationItem.rightBarButtonItem = doneItem;
+            
+            UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                                                        target:self
+                                                                                        action:@selector(cancel:)];
+            self.navigationItem.leftBarButtonItem = cancelItem;
+        }
+    }
+    return self;
+}
+
+- (void)save:(id)sender {
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)cancel:(id)sender {
+    
+    // if the user cancelled, the remove the MCItem from the store
+    [[MCItemStore sharedStore] removeItem:self.item];
+    
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil
+                         bundle:(NSBundle *)nibBundleOrNil {
+    
+    [NSException raise:@"Wrong initializer" format:@"Use initForNewItem:"];
+    return nil;
+}
+
+
 
 @end
 
