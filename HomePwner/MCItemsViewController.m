@@ -117,13 +117,24 @@
     MCItem *newItem = [[MCItemStore sharedStore] createItem];
     
     // figure out where that item is in the array
-    NSInteger lastRow = [[[MCItemStore sharedStore] allItems] indexOfObject:newItem];
+//    NSInteger lastRow = [[[MCItemStore sharedStore] allItems] indexOfObject:newItem];
     
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
     
     // insert this new row into the table
-    [self.tableView insertRowsAtIndexPaths:@[indexPath]
-                          withRowAnimation:UITableViewRowAnimationTop];
+//    [self.tableView insertRowsAtIndexPaths:@[indexPath]
+//                          withRowAnimation:UITableViewRowAnimationTop];
+   
+    MCDetailViewController *detailViewController = [[MCDetailViewController alloc] initForNewItem:YES];
+    
+    detailViewController.item = newItem;
+    
+    UINavigationController *navController = [[UINavigationController alloc]
+                                             initWithRootViewController:detailViewController];
+    
+    navController.modalPresentationStyle = UIModalPresentationFormSheet;
+    
+    [self presentViewController:navController animated:YES completion:NULL];
     
 }
 
@@ -149,8 +160,8 @@
 //}
 
 - (void)tableView:(UITableView *)tableView
-commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
-forRowAtIndexPath:(NSIndexPath *)indexPath {
+    commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+    forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     // if the table view is asking to commit a delete command
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -175,9 +186,11 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 
 # pragma mark -NavController
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView
+    didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    MCDetailViewController *detailViewController = [[MCDetailViewController alloc] init];
+    //MCDetailViewController *detailViewController = [[MCDetailViewController alloc] init];
+    MCDetailViewController *detailViewController = [[MCDetailViewController alloc] initForNewItem:NO];
     
     NSArray *items = [[MCItemStore sharedStore] allItems];
     MCItem *selectedItem = items[indexPath.row];
