@@ -12,6 +12,9 @@
 
 @interface MCDetailViewController : UIViewController
 
-@property (nonatomic, strong) MCItem *item; 
+- (instancetype)initForNewItem:(BOOL)isNew;
+
+@property (nonatomic, strong) MCItem *item;
+@property (nonatomic, copy) void (^dismissBlock)(void);
 
 @end

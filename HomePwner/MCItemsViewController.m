@@ -129,6 +129,9 @@
     
     detailViewController.item = newItem;
     
+    // block for reloading data on table view 
+    detailViewController.dismissBlock = ^{[self.tableView reloadData];};
+    
     UINavigationController *navController = [[UINavigationController alloc]
                                              initWithRootViewController:detailViewController];
     

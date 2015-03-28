@@ -193,9 +193,7 @@
     } else {
         [self presentViewController:imagePicker animated:YES completion:NULL];
     }
-    
-    
-
+   
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker
@@ -278,7 +276,8 @@
 }
 
 - (void)save:(id)sender {
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
+    //[self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:self.dismissBlock];
 }
 
 - (void)cancel:(id)sender {
@@ -286,7 +285,8 @@
     // if the user cancelled, the remove the MCItem from the store
     [[MCItemStore sharedStore] removeItem:self.item];
     
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
+//    [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:self.dismissBlock];
 }
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil
