@@ -146,7 +146,7 @@
     
     self = [super init];
     if (self) {
-        _itemName = [aDecoder decodeObjectForKey:@"itemNam"];
+        _itemName = [aDecoder decodeObjectForKey:@"itemName"];
         _serialNumber = [aDecoder decodeObjectForKey:@"serialNumber"];
         _dateCreated = [aDecoder decodeObjectForKey:@"dateCreated"];
         _itemKey = [aDecoder decodeObjectForKey:@"itemKey"];
