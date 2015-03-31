@@ -75,9 +75,7 @@
 }
 
 - (UIImage *)imageForKey:(NSString *)key {
-//    return [self.dictionary objectForKey:key];
-//    return self.dictionary[key];
-    
+
     // if possible, get it from dictionary
     UIImage *result = self.dictionary[key];
     

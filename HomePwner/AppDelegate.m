@@ -35,8 +35,7 @@
     self.window.rootViewController = navController;
     
     // place the MCItemsViewController's table view in the window hierarchy
-//    self.window.rootViewController = itemsViewController;
-    
+    // self.window.rootViewController = itemsViewController;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

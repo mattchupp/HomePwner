@@ -22,28 +22,12 @@
 
 #pragma mark -Setup
 
-// load the headerView.xib file
-//- (UIView *)headerView {
-//    
-//    if (!_headerView) {
-//        
-//        // load HeaderView.xib
-//        [[NSBundle mainBundle] loadNibNamed:@"HeaderView" owner:self options:nil];
-//    }
-//    
-//    return _headerView;
-//}
-
-
 - (instancetype)init {
     
     // call the superclass's designated initializer
     self = [super initWithStyle:UITableViewStylePlain];
     
     if (self) {
-//        for (int i = 0; i < 5; i++) {
-//            [[MCItemStore sharedStore] createItem];
-//        }
         
         UINavigationItem *navItem = self.navigationItem;
         navItem.title = @"Homepwner";
@@ -106,6 +90,7 @@
     
 }
 
+#pragma mark -ViewLoads
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -117,6 +102,16 @@
     // Register this NIB, which contains the cell
     [self.tableView registerNib:nib forCellReuseIdentifier:@"MCItemCell"];
     
+}
+
+# pragma mark -ViewWillAppear
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    // reload did will view appears again
+    [self.tableView reloadData];
 }
 
 #pragma mark -Buttons
@@ -155,27 +150,6 @@
     [self presentViewController:navController animated:YES completion:NULL];
     
 }
-
-//- (IBAction)toggleEditingMode:(id)sender {
-//    
-//    // if you are currently in editing mode...
-//    if (self.isEditing) {
-//        
-//        // change text of button to inform user of state
-//        [sender setTitle:@"Edit" forState:UIControlStateNormal];
-//        
-//        // turn of editing mode
-//        [self setEditing:NO animated:YES];
-//    } else {
-//        
-//        // change text of button to inform user of state
-//        [sender setTitle:@"Done" forState:UIControlStateNormal];
-//        
-//        // Enter editing mode
-//        [self setEditing:YES animated:YES];
-//    }
-//    
-//}
 
 - (void)tableView:(UITableView *)tableView
     commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
@@ -220,17 +194,6 @@
     [self.navigationController pushViewController:detailViewController animated:YES];
     
 }
-
-# pragma mark -ViewWillAppear
-
-- (void)viewWillAppear:(BOOL)animated {
-    
-    [super viewWillAppear:animated];
-    
-    // reload did will view appears again
-    [self.tableView reloadData];
-}
-
 
 @end
 

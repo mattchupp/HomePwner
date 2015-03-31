@@ -28,6 +28,7 @@
 
 @implementation MCDetailViewController
 
+#pragma mark -Setup
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -52,11 +53,9 @@
     [self.imageView setContentCompressionResistancePriority:700
                                                     forAxis:UILayoutConstraintAxisVertical];
     
-    
     NSDictionary *nameMap = @{@"imageView" : self.imageView,
                               @"dateLabel" : self.dateLabel,
                               @"toolBar"   : self.toolbar};
-    
     
     // imageView is 0pts from superview at left and right edges
     NSArray *horizontalConstraints =
@@ -108,23 +107,11 @@
     
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    
-    [textField resignFirstResponder];
-    return YES;
-}
-
-- (IBAction)backgroundTapped:(id)sender {
-    
-    [self.view endEditing:YES];
-    
-}
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     UIInterfaceOrientation io =
-        [[UIApplication sharedApplication] statusBarOrientation];
+    [[UIApplication sharedApplication] statusBarOrientation];
     [self prepareViewsForOrientation:io];
     
 }
@@ -144,13 +131,20 @@
     
 }
 
-// set item to appear on nav bar 
-- (void)setItem:(MCItem *)item {
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil
+                         bundle:(NSBundle *)nibBundleOrNil {
     
-    _item = item;
-    self.navigationItem.title = _item.itemName;
+    [NSException raise:@"Wrong initializer" format:@"Use initForNewItem:"];
+    return nil;
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    [textField resignFirstResponder];
+    return YES;
+}
+
+#pragma mark -Actions
 - (IBAction)takePicture:(id)sender {
     
     if ([self.imagePickerPopover isPopoverVisible]) {
@@ -226,6 +220,19 @@
     
 }
 
+- (IBAction)backgroundTapped:(id)sender {
+    
+    [self.view endEditing:YES];
+    
+}
+
+// set item to appear on nav bar
+- (void)setItem:(MCItem *)item {
+    
+    _item = item;
+    self.navigationItem.title = _item.itemName;
+}
+
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
     
     NSLog(@"User dismissed popover");
@@ -275,6 +282,8 @@
     return self;
 }
 
+#pragma mark -Buttons
+
 - (void)save:(id)sender {
     //[self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
     [self.presentingViewController dismissViewControllerAnimated:YES completion:self.dismissBlock];
@@ -288,14 +297,6 @@
 //    [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
     [self.presentingViewController dismissViewControllerAnimated:YES completion:self.dismissBlock];
 }
-
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil
-                         bundle:(NSBundle *)nibBundleOrNil {
-    
-    [NSException raise:@"Wrong initializer" format:@"Use initForNewItem:"];
-    return nil;
-}
-
 
 
 @end
