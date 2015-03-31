@@ -10,6 +10,7 @@
 #import "MCItemStore.h"
 #import "MCItem.h"
 #import "MCDetailViewController.h"
+#import "MCItemCell.h"
 
 @interface MCItemsViewController ()
 
@@ -75,15 +76,18 @@
     return [[[MCItemStore sharedStore] allItems] count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     // create an instance of UITableViewCell, with default appearance
 //    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
 //                                                   reuseIdentifier:@"UITableViewCell"];
     
     // get a new or recycled cell
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
-                                                        forIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
+//                                                        forIndexPath:indexPath];
+    MCItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MCItemCell"
+                                                       forIndexPath:indexPath];
     
     // set the text on the cell with the description of the item
     // that is at the nth index of items, where n = row this cell
@@ -91,7 +95,12 @@
     NSArray *items = [[MCItemStore sharedStore] allItems];
     MCItem *item = items[indexPath.row];
     
-    cell.textLabel.text = [item description];
+//    cell.textLabel.text = [item description];
+    
+    // Configure the cell with the MCItem
+    cell.nameLabel.text = item.itemName;
+    cell.serialNumberLabel.text = item.serialNumber;
+    cell.valueLabel.text = [NSString stringWithFormat:@"$%d", item.valueInDollars];
     
     return cell;
     
@@ -100,7 +109,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+    
+    // Load the NIB file
+    UINib *nib = [UINib nibWithNibName:@"MCItemCell" bundle:nil];
+    
+    // Register this NIB, which contains the cell
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"MCItemCell"];
     
 }
 
