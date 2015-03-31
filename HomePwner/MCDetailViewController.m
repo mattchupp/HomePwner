@@ -196,6 +196,8 @@
     // get picked image from info dictionary
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     
+    [self.item setThumbnailFromImage:image];
+    
     // store the image in the MCImageStore for this key
     [[MCImageStore sharedStore] setImage:image forKey:self.item.itemKey];
     

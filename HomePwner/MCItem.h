@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface MCItem : NSObject <NSCoding>
 {
@@ -16,6 +17,7 @@
     NSDate *_dateCreated;
 }
 @property (nonatomic, copy) NSString *itemKey;
+@property (strong, nonatomic) UIImage *thumbnail; 
 
 + (instancetype)randomItem; 
 
@@ -33,5 +35,7 @@
 - (int)valueInDollars;
 
 - (NSDate *)dateCreated;
+
+- (void)setThumbnailFromImage:(UIImage *)image;
 
 @end
