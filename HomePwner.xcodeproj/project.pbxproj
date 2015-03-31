@@ -17,6 +17,8 @@
 		95C121151ABA543100704025 /* MCItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C121141ABA543100704025 /* MCItemsViewController.m */; };
 		95C1211B1ABA565600704025 /* MCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C1211A1ABA565600704025 /* MCItem.m */; };
 		95C1211E1ABA58FD00704025 /* MCItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C1211D1ABA58FD00704025 /* MCItemStore.m */; };
+		95DB89B61ACA627A00B8650E /* MCItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DB89B51ACA627A00B8650E /* MCItemCell.m */; };
+		95DB89B81ACA62B100B8650E /* MCItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95DB89B71ACA62B100B8650E /* MCItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,9 @@
 		95C1211A1ABA565600704025 /* MCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCItem.m; sourceTree = "<group>"; };
 		95C1211C1ABA58FD00704025 /* MCItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCItemStore.h; sourceTree = "<group>"; };
 		95C1211D1ABA58FD00704025 /* MCItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCItemStore.m; sourceTree = "<group>"; };
+		95DB89B41ACA627A00B8650E /* MCItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCItemCell.h; sourceTree = "<group>"; };
+		95DB89B51ACA627A00B8650E /* MCItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCItemCell.m; sourceTree = "<group>"; };
+		95DB89B71ACA62B100B8650E /* MCItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +100,9 @@
 				95C120F21ABA534600704025 /* AppDelegate.m */,
 				95C121131ABA543100704025 /* MCItemsViewController.h */,
 				95C121141ABA543100704025 /* MCItemsViewController.m */,
+				95DB89B41ACA627A00B8650E /* MCItemCell.h */,
+				95DB89B51ACA627A00B8650E /* MCItemCell.m */,
+				95DB89B71ACA62B100B8650E /* MCItemCell.xib */,
 				95917A301ABC957B00F4EF69 /* MCDetailViewController.h */,
 				95917A311ABC957B00F4EF69 /* MCDetailViewController.m */,
 				95917A321ABC957B00F4EF69 /* MCDetailViewController.xib */,
@@ -218,6 +226,7 @@
 			files = (
 				95917A341ABC957B00F4EF69 /* MCDetailViewController.xib in Resources */,
 				95C120FB1ABA534600704025 /* Images.xcassets in Resources */,
+				95DB89B81ACA62B100B8650E /* MCItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +250,7 @@
 				95C120F01ABA534600704025 /* main.m in Sources */,
 				95C1211E1ABA58FD00704025 /* MCItemStore.m in Sources */,
 				9507DBD71ABF8C9C001D234F /* MCImageStore.m in Sources */,
+				95DB89B61ACA627A00B8650E /* MCItemCell.m in Sources */,
 				95917A331ABC957B00F4EF69 /* MCDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
