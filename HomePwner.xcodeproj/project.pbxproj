@@ -98,21 +98,8 @@
 			children = (
 				95C120F11ABA534600704025 /* AppDelegate.h */,
 				95C120F21ABA534600704025 /* AppDelegate.m */,
-				95C121131ABA543100704025 /* MCItemsViewController.h */,
-				95C121141ABA543100704025 /* MCItemsViewController.m */,
-				95DB89B41ACA627A00B8650E /* MCItemCell.h */,
-				95DB89B51ACA627A00B8650E /* MCItemCell.m */,
-				95DB89B71ACA62B100B8650E /* MCItemCell.xib */,
-				95917A301ABC957B00F4EF69 /* MCDetailViewController.h */,
-				95917A311ABC957B00F4EF69 /* MCDetailViewController.m */,
-				95917A321ABC957B00F4EF69 /* MCDetailViewController.xib */,
-				95C121191ABA565600704025 /* MCItem.h */,
-				95C1211A1ABA565600704025 /* MCItem.m */,
-				95C1211C1ABA58FD00704025 /* MCItemStore.h */,
-				95C1211D1ABA58FD00704025 /* MCItemStore.m */,
-				9507DBD51ABF8C9C001D234F /* MCImageStore.h */,
-				9507DBD61ABF8C9C001D234F /* MCImageStore.m */,
-				95C120FA1ABA534600704025 /* Images.xcassets */,
+				95DB89B91ACA686700B8650E /* ViewControllers */,
+				95DB89BA1ACA689700B8650E /* Storage */,
 				95C120ED1ABA534600704025 /* Supporting Files */,
 			);
 			path = HomePwner;
@@ -121,6 +108,7 @@
 		95C120ED1ABA534600704025 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				95C120FA1ABA534600704025 /* Images.xcassets */,
 				95C120EE1ABA534600704025 /* Info.plist */,
 				95C120EF1ABA534600704025 /* main.m */,
 			);
@@ -142,6 +130,34 @@
 				95C121081ABA534600704025 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		95DB89B91ACA686700B8650E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				95C121131ABA543100704025 /* MCItemsViewController.h */,
+				95C121141ABA543100704025 /* MCItemsViewController.m */,
+				95DB89B41ACA627A00B8650E /* MCItemCell.h */,
+				95DB89B51ACA627A00B8650E /* MCItemCell.m */,
+				95DB89B71ACA62B100B8650E /* MCItemCell.xib */,
+				95917A301ABC957B00F4EF69 /* MCDetailViewController.h */,
+				95917A311ABC957B00F4EF69 /* MCDetailViewController.m */,
+				95917A321ABC957B00F4EF69 /* MCDetailViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		95DB89BA1ACA689700B8650E /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				95C121191ABA565600704025 /* MCItem.h */,
+				95C1211A1ABA565600704025 /* MCItem.m */,
+				95C1211C1ABA58FD00704025 /* MCItemStore.h */,
+				95C1211D1ABA58FD00704025 /* MCItemStore.m */,
+				9507DBD51ABF8C9C001D234F /* MCImageStore.h */,
+				9507DBD61ABF8C9C001D234F /* MCImageStore.m */,
+			);
+			name = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
