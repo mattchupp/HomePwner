@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D113c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,28 +13,51 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="siw-hG-Q2S" id="Wtj-3T-2St">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlE-qn-ot8">
-                        <rect key="frame" x="57" y="1" width="85" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlE-qn-ot8">
+                        <rect key="frame" x="56" y="1" width="125" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="5L0-hf-guV"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2c-Od-jMn">
-                        <rect key="frame" x="223" y="11" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2c-Od-jMn">
+                        <rect key="frame" x="262" y="11" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iND-ZM-0mg">
-                        <rect key="frame" x="8" y="3" width="41" height="38"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iND-ZM-0mg">
+                        <rect key="frame" x="8" y="2" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="KVl-gZ-dfb"/>
+                            <constraint firstAttribute="width" constant="40" id="UQ5-IP-tLf"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9X5-MI-e1i">
-                        <rect key="frame" x="57" y="23" width="85" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9X5-MI-e1i">
+                        <rect key="frame" x="56" y="28" width="125" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="js4-Zl-Ikv"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="E2c-Od-jMn" firstAttribute="leading" secondItem="GlE-qn-ot8" secondAttribute="trailing" constant="81" id="3nU-c5-HM6"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="E2c-Od-jMn" secondAttribute="trailing" constant="8" id="5Ku-3A-thj"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="9X5-MI-e1i" secondAttribute="bottom" constant="-8" id="7Pw-a9-ORT"/>
+                    <constraint firstAttribute="centerY" secondItem="iND-ZM-0mg" secondAttribute="centerY" id="DXW-bo-4Nq"/>
+                    <constraint firstItem="9X5-MI-e1i" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GlE-qn-ot8" secondAttribute="bottom" constant="1" id="Foc-c3-9hl"/>
+                    <constraint firstItem="9X5-MI-e1i" firstAttribute="leading" secondItem="iND-ZM-0mg" secondAttribute="trailing" constant="8" id="UzW-5a-0Tg"/>
+                    <constraint firstItem="GlE-qn-ot8" firstAttribute="leading" secondItem="iND-ZM-0mg" secondAttribute="trailing" constant="8" id="WZI-hO-n0J"/>
+                    <constraint firstItem="GlE-qn-ot8" firstAttribute="top" secondItem="Wtj-3T-2St" secondAttribute="topMargin" constant="-7" id="cm7-1G-1bV"/>
+                    <constraint firstAttribute="centerY" secondItem="E2c-Od-jMn" secondAttribute="centerY" id="psG-QY-FuN"/>
+                    <constraint firstItem="iND-ZM-0mg" firstAttribute="leading" secondItem="Wtj-3T-2St" secondAttribute="leadingMargin" id="ykY-Rd-NJY"/>
+                    <constraint firstItem="E2c-Od-jMn" firstAttribute="leading" secondItem="9X5-MI-e1i" secondAttribute="trailing" constant="81" id="zB3-JQ-AP1"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="nameLabel" destination="GlE-qn-ot8" id="Ypm-6z-y7G"/>
@@ -41,7 +65,7 @@
                 <outlet property="thumbnailView" destination="iND-ZM-0mg" id="aVy-sw-5hx"/>
                 <outlet property="valueLabel" destination="E2c-Od-jMn" id="Dm5-nc-JmZ"/>
             </connections>
-            <point key="canvasLocation" x="242" y="191"/>
+            <point key="canvasLocation" x="242" y="189"/>
         </tableViewCell>
     </objects>
 </document>
