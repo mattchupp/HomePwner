@@ -44,8 +44,18 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjc-wP-Clt">
+                        <rect key="frame" x="8" y="2" width="40" height="40"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="showImage:" destination="siw-hG-Q2S" eventType="touchUpInside" id="KkJ-ME-RWX"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="iND-ZM-0mg" firstAttribute="trailing" secondItem="sjc-wP-Clt" secondAttribute="trailing" id="2Yc-RR-ru1"/>
                     <constraint firstItem="E2c-Od-jMn" firstAttribute="leading" secondItem="GlE-qn-ot8" secondAttribute="trailing" constant="81" id="3nU-c5-HM6"/>
                     <constraint firstAttribute="trailingMargin" secondItem="E2c-Od-jMn" secondAttribute="trailing" constant="8" id="5Ku-3A-thj"/>
                     <constraint firstAttribute="bottomMargin" secondItem="9X5-MI-e1i" secondAttribute="bottom" constant="-8" id="7Pw-a9-ORT"/>
@@ -53,10 +63,13 @@
                     <constraint firstItem="9X5-MI-e1i" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GlE-qn-ot8" secondAttribute="bottom" constant="1" id="Foc-c3-9hl"/>
                     <constraint firstItem="9X5-MI-e1i" firstAttribute="leading" secondItem="iND-ZM-0mg" secondAttribute="trailing" constant="8" id="UzW-5a-0Tg"/>
                     <constraint firstItem="GlE-qn-ot8" firstAttribute="leading" secondItem="iND-ZM-0mg" secondAttribute="trailing" constant="8" id="WZI-hO-n0J"/>
+                    <constraint firstItem="iND-ZM-0mg" firstAttribute="bottom" secondItem="sjc-wP-Clt" secondAttribute="bottom" id="Ymx-Ax-Clb"/>
                     <constraint firstItem="GlE-qn-ot8" firstAttribute="top" secondItem="Wtj-3T-2St" secondAttribute="topMargin" constant="-7" id="cm7-1G-1bV"/>
                     <constraint firstAttribute="centerY" secondItem="E2c-Od-jMn" secondAttribute="centerY" id="psG-QY-FuN"/>
                     <constraint firstItem="iND-ZM-0mg" firstAttribute="leading" secondItem="Wtj-3T-2St" secondAttribute="leadingMargin" id="ykY-Rd-NJY"/>
                     <constraint firstItem="E2c-Od-jMn" firstAttribute="leading" secondItem="9X5-MI-e1i" secondAttribute="trailing" constant="81" id="zB3-JQ-AP1"/>
+                    <constraint firstItem="iND-ZM-0mg" firstAttribute="leading" secondItem="sjc-wP-Clt" secondAttribute="leading" id="zgs-Ur-SRN"/>
+                    <constraint firstItem="iND-ZM-0mg" firstAttribute="top" secondItem="sjc-wP-Clt" secondAttribute="top" id="zvy-DW-1mn"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -65,7 +78,7 @@
                 <outlet property="thumbnailView" destination="iND-ZM-0mg" id="aVy-sw-5hx"/>
                 <outlet property="valueLabel" destination="E2c-Od-jMn" id="Dm5-nc-JmZ"/>
             </connections>
-            <point key="canvasLocation" x="242" y="189"/>
+            <point key="canvasLocation" x="242" y="187"/>
         </tableViewCell>
     </objects>
 </document>
