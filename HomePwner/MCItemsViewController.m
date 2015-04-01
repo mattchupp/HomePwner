@@ -92,9 +92,14 @@
     
     cell.thumbnailView.image = item.thumbnail;
     
+    // weak reference to cell
+    __weak MCItemCell *weakCell = cell;
+    
     // block for showing image when thumbnail is tapped
     cell.actionBlock = ^{
         NSLog(@"Going to show image for %@", item);
+        
+        MCItemCell *strongCell = weakCell;
         
         if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
             
@@ -108,8 +113,10 @@
             
             // Make a rectangle for the frame of the thumbnail relative
             // to our table view
-            CGRect rect = [self.view convertRect:cell.thumbnailView.bounds
-                                        fromView:cell.thumbnailView];
+//            CGRect rect = [self.view convertRect:cell.thumbnailView.bounds
+//                                        fromView:cell.thumbnailView];
+            CGRect rect = [self.view convertRect:strongCell.thumbnailView.bounds
+                                        fromView:strongCell.thumbnailView];
             
             // Create a new MCImageViewController and set its image
             MCImageViewController *ivc = [[MCImageViewController alloc] init];
