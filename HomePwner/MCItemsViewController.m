@@ -11,9 +11,12 @@
 #import "MCItem.h"
 #import "MCDetailViewController.h"
 #import "MCItemCell.h"
+#import "MCImageStore.h"
+#import "MCImageViewController.h"
 
-@interface MCItemsViewController ()
+@interface MCItemsViewController () <UIPopoverControllerDelegate>
 
+@property (strong, nonatomic) UIPopoverController *imagePopover; 
 
 @end
 
@@ -56,7 +59,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
- numberOfRowsInSection:(NSInteger)section {
+        numberOfRowsInSection:(NSInteger)section {
     
     return [[[MCItemStore sharedStore] allItems] count];
 }
@@ -89,8 +92,45 @@
     
     cell.thumbnailView.image = item.thumbnail;
     
-    return cell;
+    // block for showing image when thumbnail is tapped
+    cell.actionBlock = ^{
+        NSLog(@"Going to show image for %@", item);
+        
+        if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+            
+            NSString *itemKey = item.itemKey;
+            
+            // If there is no image, we don't need to display anything
+            UIImage *img = [[MCImageStore sharedStore] imageForKey:itemKey];
+            if (!img) {
+                return;
+            }
+            
+            // Make a rectangle for the frame of the thumbnail relative
+            // to our table view
+            CGRect rect = [self.view convertRect:cell.thumbnailView.bounds
+                                        fromView:cell.thumbnailView];
+            
+            // Create a new MCImageViewController and set its image
+            MCImageViewController *ivc = [[MCImageViewController alloc] init];
+            ivc.image = img;
+            
+            // Present a 600x600 popover from the rect
+            self.imagePopover = [[UIPopoverController alloc] initWithContentViewController:ivc];
+            self.imagePopover.delegate = self;
+            self.imagePopover.popoverContentSize = CGSizeMake(600, 600);
+            [self.imagePopover presentPopoverFromRect:rect
+                                               inView:self.view
+                             permittedArrowDirections:UIPopoverArrowDirectionAny
+                                             animated:YES];
+        }
+    };
     
+    return cell;
+}
+
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    self.imagePopover = nil; 
 }
 
 #pragma mark -ViewLoads
