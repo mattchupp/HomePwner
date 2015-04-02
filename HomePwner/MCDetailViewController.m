@@ -24,6 +24,13 @@
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cameraButton;
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *serialNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *valueLabel;
+
+- (IBAction)takePicture:(id)sender;
+- (IBAction)backgroundTapped:(id)sender;
+
 @end
 
 @implementation MCDetailViewController
@@ -113,7 +120,8 @@
     UIInterfaceOrientation io =
     [[UIApplication sharedApplication] statusBarOrientation];
     [self prepareViewsForOrientation:io];
-    
+ 
+    [self updateFonts];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -142,6 +150,26 @@
     
     [textField resignFirstResponder];
     return YES;
+}
+
+- (void)dealloc {
+    
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter removeObserver:self];
+}
+
+- (void)updateFonts {
+    
+    UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    
+    self.nameLabel.font = font;
+    self.serialNumberLabel.font = font;
+    self.valueLabel.font = font;
+    self.dateLabel.font = font;
+    
+    self.nameField.font = font;
+    self.serialNumberField.font = font;
+    self.valueField.font = font;
 }
 
 #pragma mark -Actions
@@ -280,6 +308,14 @@
                                                                                         action:@selector(cancel:)];
             self.navigationItem.leftBarButtonItem = cancelItem;
         }
+        
+        // Make sure this is NOT in the if (isNew ) { } block of code
+        NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+        [defaultCenter addObserver:self
+                          selector:@selector(updateFonts)
+                              name:UIContentSizeCategoryDidChangeNotification
+                            object:nil];
+        
     }
     return self;
 }
