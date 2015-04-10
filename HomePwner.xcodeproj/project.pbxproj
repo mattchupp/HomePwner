@@ -8,14 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		9507DBD71ABF8C9C001D234F /* MCImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 9507DBD61ABF8C9C001D234F /* MCImageStore.m */; };
+		958BD3AB1AD7590B00C0576B /* MCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 958BD3AA1AD7590B00C0576B /* MCItem.m */; };
 		95917A331ABC957B00F4EF69 /* MCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95917A311ABC957B00F4EF69 /* MCDetailViewController.m */; };
 		95917A341ABC957B00F4EF69 /* MCDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95917A321ABC957B00F4EF69 /* MCDetailViewController.xib */; };
+		95B1A9B11ACB79EE00A766FB /* MCImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B1A9B01ACB79EE00A766FB /* MCImageViewController.m */; };
+		95B6A29F1AD5AA2400103F05 /* HomePwner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95B6A29D1AD5AA2400103F05 /* HomePwner.xcdatamodeld */; };
+		95B6A2A21AD5AB9000103F05 /* MCImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B6A2A11AD5AB9000103F05 /* MCImageTransformer.m */; };
 		95C120F01ABA534600704025 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C120EF1ABA534600704025 /* main.m */; };
 		95C120F31ABA534600704025 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C120F21ABA534600704025 /* AppDelegate.m */; };
 		95C120FB1ABA534600704025 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95C120FA1ABA534600704025 /* Images.xcassets */; };
 		95C1210A1ABA534600704025 /* HomePwnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C121091ABA534600704025 /* HomePwnerTests.m */; };
 		95C121151ABA543100704025 /* MCItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C121141ABA543100704025 /* MCItemsViewController.m */; };
-		95C1211B1ABA565600704025 /* MCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C1211A1ABA565600704025 /* MCItem.m */; };
 		95C1211E1ABA58FD00704025 /* MCItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C1211D1ABA58FD00704025 /* MCItemStore.m */; };
 		95DB89B61ACA627A00B8650E /* MCItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DB89B51ACA627A00B8650E /* MCItemCell.m */; };
 		95DB89B81ACA62B100B8650E /* MCItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95DB89B71ACA62B100B8650E /* MCItemCell.xib */; };
@@ -34,9 +37,16 @@
 /* Begin PBXFileReference section */
 		9507DBD51ABF8C9C001D234F /* MCImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCImageStore.h; sourceTree = "<group>"; };
 		9507DBD61ABF8C9C001D234F /* MCImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCImageStore.m; sourceTree = "<group>"; };
+		958BD3A91AD7590B00C0576B /* MCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCItem.h; sourceTree = "<group>"; };
+		958BD3AA1AD7590B00C0576B /* MCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCItem.m; sourceTree = "<group>"; };
 		95917A301ABC957B00F4EF69 /* MCDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDetailViewController.h; sourceTree = "<group>"; };
 		95917A311ABC957B00F4EF69 /* MCDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDetailViewController.m; sourceTree = "<group>"; };
 		95917A321ABC957B00F4EF69 /* MCDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDetailViewController.xib; sourceTree = "<group>"; };
+		95B1A9AF1ACB79EE00A766FB /* MCImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCImageViewController.h; sourceTree = "<group>"; };
+		95B1A9B01ACB79EE00A766FB /* MCImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCImageViewController.m; sourceTree = "<group>"; };
+		95B6A29E1AD5AA2400103F05 /* HomePwner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HomePwner.xcdatamodel; sourceTree = "<group>"; };
+		95B6A2A01AD5AB9000103F05 /* MCImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCImageTransformer.h; sourceTree = "<group>"; };
+		95B6A2A11AD5AB9000103F05 /* MCImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCImageTransformer.m; sourceTree = "<group>"; };
 		95C120EA1ABA534600704025 /* HomePwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomePwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C120EE1ABA534600704025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95C120EF1ABA534600704025 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,8 +58,6 @@
 		95C121091ABA534600704025 /* HomePwnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePwnerTests.m; sourceTree = "<group>"; };
 		95C121131ABA543100704025 /* MCItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCItemsViewController.h; sourceTree = "<group>"; };
 		95C121141ABA543100704025 /* MCItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCItemsViewController.m; sourceTree = "<group>"; };
-		95C121191ABA565600704025 /* MCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCItem.h; sourceTree = "<group>"; };
-		95C1211A1ABA565600704025 /* MCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCItem.m; sourceTree = "<group>"; };
 		95C1211C1ABA58FD00704025 /* MCItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCItemStore.h; sourceTree = "<group>"; };
 		95C1211D1ABA58FD00704025 /* MCItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCItemStore.m; sourceTree = "<group>"; };
 		95DB89B41ACA627A00B8650E /* MCItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCItemCell.h; sourceTree = "<group>"; };
@@ -75,6 +83,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		95B6A2A31AD5AD6800103F05 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				95B6A29D1AD5AA2400103F05 /* HomePwner.xcdatamodeld */,
+				958BD3A91AD7590B00C0576B /* MCItem.h */,
+				958BD3AA1AD7590B00C0576B /* MCItem.m */,
+				95B6A2A01AD5AB9000103F05 /* MCImageTransformer.h */,
+				95B6A2A11AD5AB9000103F05 /* MCImageTransformer.m */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
 		95C120E11ABA534600704025 = {
 			isa = PBXGroup;
 			children = (
@@ -98,8 +118,9 @@
 			children = (
 				95C120F11ABA534600704025 /* AppDelegate.h */,
 				95C120F21ABA534600704025 /* AppDelegate.m */,
-				95DB89B91ACA686700B8650E /* ViewControllers */,
+				95DB89B91ACA686700B8650E /* Views */,
 				95DB89BA1ACA689700B8650E /* Storage */,
+				95B6A2A31AD5AD6800103F05 /* Core Data */,
 				95C120ED1ABA534600704025 /* Supporting Files */,
 			);
 			path = HomePwner;
@@ -132,26 +153,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		95DB89B91ACA686700B8650E /* ViewControllers */ = {
+		95DB89B91ACA686700B8650E /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				95C121131ABA543100704025 /* MCItemsViewController.h */,
 				95C121141ABA543100704025 /* MCItemsViewController.m */,
-				95DB89B41ACA627A00B8650E /* MCItemCell.h */,
-				95DB89B51ACA627A00B8650E /* MCItemCell.m */,
-				95DB89B71ACA62B100B8650E /* MCItemCell.xib */,
 				95917A301ABC957B00F4EF69 /* MCDetailViewController.h */,
 				95917A311ABC957B00F4EF69 /* MCDetailViewController.m */,
 				95917A321ABC957B00F4EF69 /* MCDetailViewController.xib */,
+				95B1A9AF1ACB79EE00A766FB /* MCImageViewController.h */,
+				95B1A9B01ACB79EE00A766FB /* MCImageViewController.m */,
+				95DB89B41ACA627A00B8650E /* MCItemCell.h */,
+				95DB89B51ACA627A00B8650E /* MCItemCell.m */,
+				95DB89B71ACA62B100B8650E /* MCItemCell.xib */,
 			);
-			name = ViewControllers;
+			name = Views;
 			sourceTree = "<group>";
 		};
 		95DB89BA1ACA689700B8650E /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				95C121191ABA565600704025 /* MCItem.h */,
-				95C1211A1ABA565600704025 /* MCItem.m */,
 				95C1211C1ABA58FD00704025 /* MCItemStore.h */,
 				95C1211D1ABA58FD00704025 /* MCItemStore.m */,
 				9507DBD51ABF8C9C001D234F /* MCImageStore.h */,
@@ -262,10 +283,13 @@
 			files = (
 				95C121151ABA543100704025 /* MCItemsViewController.m in Sources */,
 				95C120F31ABA534600704025 /* AppDelegate.m in Sources */,
-				95C1211B1ABA565600704025 /* MCItem.m in Sources */,
 				95C120F01ABA534600704025 /* main.m in Sources */,
 				95C1211E1ABA58FD00704025 /* MCItemStore.m in Sources */,
+				95B1A9B11ACB79EE00A766FB /* MCImageViewController.m in Sources */,
 				9507DBD71ABF8C9C001D234F /* MCImageStore.m in Sources */,
+				958BD3AB1AD7590B00C0576B /* MCItem.m in Sources */,
+				95B6A29F1AD5AA2400103F05 /* HomePwner.xcdatamodeld in Sources */,
+				95B6A2A21AD5AB9000103F05 /* MCImageTransformer.m in Sources */,
 				95DB89B61ACA627A00B8650E /* MCItemCell.m in Sources */,
 				95917A331ABC957B00F4EF69 /* MCDetailViewController.m in Sources */,
 			);
@@ -455,6 +479,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		95B6A29D1AD5AA2400103F05 /* HomePwner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				95B6A29E1AD5AA2400103F05 /* HomePwner.xcdatamodel */,
+			);
+			currentVersion = 95B6A29E1AD5AA2400103F05 /* HomePwner.xcdatamodel */;
+			path = HomePwner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 95C120E21ABA534600704025 /* Project object */;
 }

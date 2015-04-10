@@ -1,0 +1,13 @@
+//
+//  MCImageTransformer.h
+//  HomePwner
+//
+//  Created by Matthew Chupp on 4/8/15.
+//  Copyright (c) 2015 MattChupp. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface MCImageTransformer : NSValueTransformer
+
+@end

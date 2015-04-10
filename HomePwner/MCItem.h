@@ -1,40 +1,27 @@
 //
 //  MCItem.h
-//  RandomItems
+//  HomePwner
 //
-//  Created by Matthew Chupp on 3/16/15.
+//  Created by Matthew Chupp on 4/9/15.
 //  Copyright (c) 2015 MattChupp. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 #import <UIKit/UIKit.h>
 
-@interface MCItem : NSObject <NSCoding>
-{
-    NSString *_itemName;
-    NSString *_serialNumber;
-    int _valueInDollars;
-    NSDate *_dateCreated;
-}
-@property (nonatomic, copy) NSString *itemKey;
-@property (strong, nonatomic) UIImage *thumbnail; 
+@class NSManagedObject;
 
-+ (instancetype)randomItem; 
+@interface MCItem : NSManagedObject
 
-// designated initializer for MCITEM
--(instancetype)initWithItemName:(NSString *)name valueInDollars:(int)value serialNumber:(NSString *)sNumber;
--(instancetype)initWithItemName:(NSString *)name;
-
-- (void)setItemName:(NSString *)str;
-- (NSString *)itemName;
-
-- (void)setSerialNumber:(NSString *)str;
-- (NSString *)serialNumber;
-
-- (void)setValueInDollars:(int)v;
-- (int)valueInDollars;
-
-- (NSDate *)dateCreated;
+@property (nonatomic, strong) NSDate * dateCreated;
+@property (nonatomic, strong) NSString * itemKey;
+@property (nonatomic, strong) NSString * itemName;
+@property (nonatomic) double orderingValue;
+@property (nonatomic, strong) NSString * serialNumber;
+@property (nonatomic, strong) UIImage * thumbnail;
+@property (nonatomic) int valueInDollars;
+@property (nonatomic, strong) NSManagedObject *assetType;
 
 - (void)setThumbnailFromImage:(UIImage *)image;
 
