@@ -8,6 +8,7 @@
 
 #import "MCItemStore.h"
 #import "MCItem.h"
+#import "MCImageStore.h"
 
 @import CoreData;
 
@@ -78,6 +79,8 @@
         // Create the managed object context
         _context = [[NSManagedObjectContext alloc] init];
         _context.persistentStoreCoordinator = psc;
+        
+        [self loadAllItems];
     }
     
     return self;
@@ -90,7 +93,19 @@
 - (MCItem *)createItem {
     
     //MCItem *item = [MCItem randomItem];
-    MCItem *item = [[MCItem alloc] init];
+    //MCItem *item = [[MCItem alloc] init];
+    
+    double order;
+    if ([self.allItems count] == 0) {
+        order = 1.0;
+    } else {
+        order = [[self.privateItems lastObject] orderingValue] + 1.0;
+    }
+    NSLog(@"Adding after %d items, order = %.2f", [self.privateItems count], order);
+    
+    MCItem *item = [NSEntityDescription insertNewObjectForEntityForName:@"MCItem"
+                                                 inManagedObjectContext:self.context];
+    item.orderingValue = order;
     
     [self.privateItems addObject:item];
     
@@ -101,6 +116,11 @@
 
 -(void)removeItem:(MCItem *)item {
     
+    NSString *key = item.itemKey;
+    
+    [[MCImageStore sharedStore] deleteImageForKey:key];
+    
+    [self.context deleteObject:item];
     [self.privateItems removeObjectIdenticalTo:item];
 }
 
@@ -149,6 +169,31 @@
         NSLog(@"Error saving: %@", [error localizedDescription]);
     }
     return successful;
+}
+
+- (void)loadAllItems {
+    
+    if (!self.privateItems) {
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        
+        NSEntityDescription *e = [NSEntityDescription entityForName:@"MCItem"
+                                             inManagedObjectContext:self.context];
+        
+        request.entity = e;
+        
+        NSSortDescriptor *sd = [NSSortDescriptor
+                                sortDescriptorWithKey:@"orderingValue"
+                                            ascending:YES];
+        request.sortDescriptors = @[sd];
+        
+        NSError *error;
+        NSArray * result = [self.context executeFetchRequest:request error:&error];
+        if (!result) {
+            [NSException raise:@"Fetch failed" format:@"Reason: %@", [error localizedDescription]];
+        }
+        
+        self.privateItems = [[NSMutableArray alloc] initWithArray:result];
+    }
 }
 
 @end
