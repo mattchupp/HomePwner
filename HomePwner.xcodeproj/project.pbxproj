@@ -87,8 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				95B6A29D1AD5AA2400103F05 /* HomePwner.xcdatamodeld */,
-				958BD3A91AD7590B00C0576B /* MCItem.h */,
-				958BD3AA1AD7590B00C0576B /* MCItem.m */,
 				95B6A2A01AD5AB9000103F05 /* MCImageTransformer.h */,
 				95B6A2A11AD5AB9000103F05 /* MCImageTransformer.m */,
 			);
@@ -173,6 +171,8 @@
 		95DB89BA1ACA689700B8650E /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				958BD3A91AD7590B00C0576B /* MCItem.h */,
+				958BD3AA1AD7590B00C0576B /* MCItem.m */,
 				95C1211C1ABA58FD00704025 /* MCItemStore.h */,
 				95C1211D1ABA58FD00704025 /* MCItemStore.m */,
 				9507DBD51ABF8C9C001D234F /* MCImageStore.h */,
