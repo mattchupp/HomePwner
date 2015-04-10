@@ -126,7 +126,8 @@
 
 #pragma mark -MoveRow
 
-- (void)moveItemAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex {
+- (void)moveItemAtIndex:(NSUInteger)fromIndex
+                toIndex:(NSUInteger)toIndex {
     
     if (fromIndex == toIndex) {
         
@@ -138,6 +139,30 @@
         
         // insert item in array at new location
         [self.privateItems insertObject:item atIndex:toIndex];
+        
+        // Computing a new orderValue for the object that was moved
+        double lowerBound = 0.0;
+        
+        // Is there an object before it in the array?
+        if (toIndex > 0) {
+            lowerBound = [self.privateItems[(toIndex - 1)] orderingValue];
+        } else {
+            lowerBound = [self.privateItems[1] orderingValue] - 2.0;
+        }
+        
+        double upperBound = 0.0;
+        
+        // Is there an object after it in the array?
+        if (toIndex < [self.privateItems count] -1) {
+            upperBound = [self.privateItems[(toIndex + 1)] orderingValue];
+        } else {
+            upperBound = [self.privateItems[(toIndex - 1)] orderingValue] + 2.0; 
+        }
+        
+        double newOrderingValue = (lowerBound + upperBound) / 2.0;
+        
+        NSLog(@"moving to order %f", newOrderingValue);
+        item.orderingValue = newOrderingValue; 
     }
 }
 
@@ -194,6 +219,47 @@
         
         self.privateItems = [[NSMutableArray alloc] initWithArray:result];
     }
+}
+
+- (NSArray *)allAssetTypes {
+    
+    if (!_allAssetTypes) {
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        
+        NSEntityDescription *e = [NSEntityDescription entityForName:@"MCAssetType"
+                                             inManagedObjectContext:self.context];
+        request.entity = e;
+        
+        NSError *error;
+        NSArray *result = [self.context executeFetchRequest:request
+                                                      error:&error];
+        if (!result) {
+            [NSException raise:@"Fetch Failed!" format:@"Reason: %@",
+             [error localizedDescription]];
+        }
+        _allAssetTypes = [result mutableCopy];
+    }
+    
+    // Is this the first time the program is being run?
+    if ([_allAssetTypes count] == 0) {
+        NSManagedObject *type;
+        
+        type = [NSEntityDescription insertNewObjectForEntityForName:@"MCAssetType"
+                                             inManagedObjectContext:self.context];
+        [type setValue:@"Furniture" forKey:@"label"];
+        [_allAssetTypes addObject:type];
+        
+        type = [NSEntityDescription insertNewObjectForEntityForName:@"MCAssetType"
+                                             inManagedObjectContext:self.context];
+        [type setValue:@"Jewelry" forKey:@"label"];
+        [_allAssetTypes addObject:type];
+        
+        type = [NSEntityDescription insertNewObjectForEntityForName:@"MCAssetType"
+                                             inManagedObjectContext:self.context];
+        [type setValue:@"Electronis" forKey:@"label"];
+        [_allAssetTypes addObject:type];
+    }
+    return _allAssetTypes;
 }
 
 @end

@@ -19,6 +19,7 @@
 - (void)removeItem:(MCItem *)item;
 - (void)moveItemAtIndex:(NSUInteger)fromIndex
                 toIndex:(NSUInteger)toIndex;
-- (BOOL)saveChanges; 
+- (BOOL)saveChanges;
+- (NSArray *)allAssetTypes;
 
 @end
