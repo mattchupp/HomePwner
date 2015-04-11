@@ -256,7 +256,7 @@
         
         type = [NSEntityDescription insertNewObjectForEntityForName:@"MCAssetType"
                                              inManagedObjectContext:self.context];
-        [type setValue:@"Electronis" forKey:@"label"];
+        [type setValue:@"Electronics" forKey:@"label"];
         [_allAssetTypes addObject:type];
     }
     return _allAssetTypes;

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9507DBD71ABF8C9C001D234F /* MCImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 9507DBD61ABF8C9C001D234F /* MCImageStore.m */; };
+		951CAFCF1AD821C10068327D /* MCAssetTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 951CAFCE1AD821C10068327D /* MCAssetTypeViewController.m */; };
 		958BD3AB1AD7590B00C0576B /* MCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 958BD3AA1AD7590B00C0576B /* MCItem.m */; };
 		95917A331ABC957B00F4EF69 /* MCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95917A311ABC957B00F4EF69 /* MCDetailViewController.m */; };
 		95917A341ABC957B00F4EF69 /* MCDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95917A321ABC957B00F4EF69 /* MCDetailViewController.xib */; };
@@ -37,6 +38,8 @@
 /* Begin PBXFileReference section */
 		9507DBD51ABF8C9C001D234F /* MCImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCImageStore.h; sourceTree = "<group>"; };
 		9507DBD61ABF8C9C001D234F /* MCImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCImageStore.m; sourceTree = "<group>"; };
+		951CAFCD1AD821C10068327D /* MCAssetTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCAssetTypeViewController.h; sourceTree = "<group>"; };
+		951CAFCE1AD821C10068327D /* MCAssetTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCAssetTypeViewController.m; sourceTree = "<group>"; };
 		958BD3A91AD7590B00C0576B /* MCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCItem.h; sourceTree = "<group>"; };
 		958BD3AA1AD7590B00C0576B /* MCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCItem.m; sourceTree = "<group>"; };
 		95917A301ABC957B00F4EF69 /* MCDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDetailViewController.h; sourceTree = "<group>"; };
@@ -161,6 +164,8 @@
 				95917A321ABC957B00F4EF69 /* MCDetailViewController.xib */,
 				95B1A9AF1ACB79EE00A766FB /* MCImageViewController.h */,
 				95B1A9B01ACB79EE00A766FB /* MCImageViewController.m */,
+				951CAFCD1AD821C10068327D /* MCAssetTypeViewController.h */,
+				951CAFCE1AD821C10068327D /* MCAssetTypeViewController.m */,
 				95DB89B41ACA627A00B8650E /* MCItemCell.h */,
 				95DB89B51ACA627A00B8650E /* MCItemCell.m */,
 				95DB89B71ACA62B100B8650E /* MCItemCell.xib */,
@@ -284,6 +289,7 @@
 				95C121151ABA543100704025 /* MCItemsViewController.m in Sources */,
 				95C120F31ABA534600704025 /* AppDelegate.m in Sources */,
 				95C120F01ABA534600704025 /* main.m in Sources */,
+				951CAFCF1AD821C10068327D /* MCAssetTypeViewController.m in Sources */,
 				95C1211E1ABA58FD00704025 /* MCItemStore.m in Sources */,
 				95B1A9B11ACB79EE00A766FB /* MCImageViewController.m in Sources */,
 				9507DBD71ABF8C9C001D234F /* MCImageStore.m in Sources */,

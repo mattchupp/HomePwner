@@ -16,7 +16,7 @@
     return [super initWithStyle:UITableViewStylePlain];
 }
 
-- (instancetype)initWithStyle:(UITableViewStyle)style {
++ (instancetype)initWithStyle:(UITableViewStyle)style {
     return [self init];
 }
 
