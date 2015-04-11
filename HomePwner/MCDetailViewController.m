@@ -315,6 +315,10 @@
     self = [super initWithNibName:nil bundle:nil];
     
     if (self) {
+        
+        self.restorationIdentifier = NSStringFromClass([self class]);
+        self.restorationClass = [self class];
+        
         if (isNew) {
             UIBarButtonItem *doneItem = [[UIBarButtonItem alloc]
                                          initWithBarButtonSystemItem:UIBarButtonSystemItemDone
@@ -353,6 +357,19 @@
     
 //    [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
     [self.presentingViewController dismissViewControllerAnimated:YES completion:self.dismissBlock];
+}
+
+#pragma mark -Restoration
+
++ (UIViewController *)viewControllerWithRestorationIdentifierPath:(NSArray *)path
+                                                            coder:(NSCoder *)coder {
+ 
+    BOOL isNew = NO;
+    if ([path count] == 3) {
+        isNew = YES;
+    }
+    
+    return [[self alloc] initForNewItem:isNew];
 }
 
 

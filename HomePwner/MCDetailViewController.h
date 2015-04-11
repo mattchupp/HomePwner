@@ -10,7 +10,7 @@
 
 @class MCItem;
 
-@interface MCDetailViewController : UIViewController
+@interface MCDetailViewController : UIViewController <UIViewControllerRestoration>
 
 - (instancetype)initForNewItem:(BOOL)isNew;
 

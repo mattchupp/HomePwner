@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MCItemsViewController : UITableViewController
+@interface MCItemsViewController : UITableViewController <UIViewControllerRestoration>
 
 
 @end
