@@ -11,6 +11,7 @@
 		951CAFCF1AD821C10068327D /* MCAssetTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 951CAFCE1AD821C10068327D /* MCAssetTypeViewController.m */; };
 		958BD3AB1AD7590B00C0576B /* MCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 958BD3AA1AD7590B00C0576B /* MCItem.m */; };
 		95917A331ABC957B00F4EF69 /* MCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95917A311ABC957B00F4EF69 /* MCDetailViewController.m */; };
+		959A8EC21ADB015B00CD0483 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 959A8EC11ADB015B00CD0483 /* Settings.bundle */; };
 		95B1A9B11ACB79EE00A766FB /* MCImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B1A9B01ACB79EE00A766FB /* MCImageViewController.m */; };
 		95B285151ADAE6DC00D7C97E /* MCDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95B285171ADAE6DC00D7C97E /* MCDetailViewController.xib */; };
 		95B2851E1ADAEDF900D7C97E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95B285201ADAEDF900D7C97E /* Localizable.strings */; };
@@ -45,6 +46,7 @@
 		958BD3AA1AD7590B00C0576B /* MCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCItem.m; sourceTree = "<group>"; };
 		95917A301ABC957B00F4EF69 /* MCDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDetailViewController.h; sourceTree = "<group>"; };
 		95917A311ABC957B00F4EF69 /* MCDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDetailViewController.m; sourceTree = "<group>"; };
+		959A8EC11ADB015B00CD0483 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		95B1A9AF1ACB79EE00A766FB /* MCImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCImageViewController.h; sourceTree = "<group>"; };
 		95B1A9B01ACB79EE00A766FB /* MCImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCImageViewController.m; sourceTree = "<group>"; };
 		95B285161ADAE6DC00D7C97E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MCDetailViewController.xib; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				95DB89BA1ACA689700B8650E /* Storage */,
 				95B6A2A31AD5AD6800103F05 /* Core Data */,
 				95C120ED1ABA534600704025 /* Supporting Files */,
+				959A8EC11ADB015B00CD0483 /* Settings.bundle */,
 			);
 			path = HomePwner;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			files = (
 				95B285151ADAE6DC00D7C97E /* MCDetailViewController.xib in Resources */,
 				95B2851E1ADAEDF900D7C97E /* Localizable.strings in Resources */,
+				959A8EC21ADB015B00CD0483 /* Settings.bundle in Resources */,
 				95C120FB1ABA534600704025 /* Images.xcassets in Resources */,
 				95DB89B81ACA62B100B8650E /* MCItemCell.xib in Resources */,
 			);
