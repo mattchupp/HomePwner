@@ -10,8 +10,8 @@
 #import "MCItemsViewController.h"
 #import "MCItemStore.h"
 
-extern NSString * const MCNextItemValuePrefsKey = @"NextItemValue";
-extern NSString * const MCNextItemNamePrefsKey = @"NextItemName";
+NSString * const MCNextItemValuePrefsKey = @"NextItemValue";
+NSString * const MCNextItemNamePrefsKey = @"NextItemName";
 
 @interface AppDelegate ()
 

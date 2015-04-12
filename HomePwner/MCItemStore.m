@@ -9,6 +9,7 @@
 #import "MCItemStore.h"
 #import "MCItem.h"
 #import "MCImageStore.h"
+#import "AppDelegate.h"
 
 @import CoreData;
 
@@ -106,6 +107,13 @@
     MCItem *item = [NSEntityDescription insertNewObjectForEntityForName:@"MCItem"
                                                  inManagedObjectContext:self.context];
     item.orderingValue = order;
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    item.valueInDollars = [defaults integerForKey:MCNextItemValuePrefsKey];
+    item.itemName = [defaults objectForKey:MCNextItemNamePrefsKey];
+    
+    // List out all of the defaults to console
+    NSLog(@"defaults = %@", [defaults dictionaryRepresentation]);
     
     [self.privateItems addObject:item];
     
