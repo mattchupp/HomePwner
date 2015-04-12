@@ -293,7 +293,7 @@
         NSArray *items = [[MCItemStore sharedStore] allItems];
         for (MCItem *item in items) {
             if ([identifier isEqualToString:item.itemKey]) {
-                NSUInteger row = [items indexOfObjectIdenticalTo:item];
+                NSInteger row = [items indexOfObjectIdenticalTo:item];
                 indexPath = [NSIndexPath indexPathForRow:row inSection:0];
                 break;
             }
