@@ -13,6 +13,7 @@
 		95917A331ABC957B00F4EF69 /* MCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95917A311ABC957B00F4EF69 /* MCDetailViewController.m */; };
 		95B1A9B11ACB79EE00A766FB /* MCImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B1A9B01ACB79EE00A766FB /* MCImageViewController.m */; };
 		95B285151ADAE6DC00D7C97E /* MCDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95B285171ADAE6DC00D7C97E /* MCDetailViewController.xib */; };
+		95B2851E1ADAEDF900D7C97E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95B285201ADAEDF900D7C97E /* Localizable.strings */; };
 		95B6A29F1AD5AA2400103F05 /* HomePwner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95B6A29D1AD5AA2400103F05 /* HomePwner.xcdatamodeld */; };
 		95B6A2A21AD5AB9000103F05 /* MCImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B6A2A11AD5AB9000103F05 /* MCImageTransformer.m */; };
 		95C120F01ABA534600704025 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C120EF1ABA534600704025 /* main.m */; };
@@ -49,6 +50,9 @@
 		95B285161ADAE6DC00D7C97E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MCDetailViewController.xib; sourceTree = "<group>"; };
 		95B2851A1ADAE78100D7C97E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MCDetailViewController.xib; sourceTree = "<group>"; };
 		95B2851B1ADAE82B00D7C97E /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/MCDetailViewController.strings"; sourceTree = "<group>"; };
+		95B2851F1ADAEDF900D7C97E /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		95B285211ADAEDFD00D7C97E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		95B285221ADAEDFE00D7C97E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		95B6A29E1AD5AA2400103F05 /* HomePwner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HomePwner.xcdatamodel; sourceTree = "<group>"; };
 		95B6A2A01AD5AB9000103F05 /* MCImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCImageTransformer.h; sourceTree = "<group>"; };
 		95B6A2A11AD5AB9000103F05 /* MCImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCImageTransformer.m; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 				95DB89B41ACA627A00B8650E /* MCItemCell.h */,
 				95DB89B51ACA627A00B8650E /* MCItemCell.m */,
 				95DB89B71ACA62B100B8650E /* MCItemCell.xib */,
+				95B285201ADAEDF900D7C97E /* Localizable.strings */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95B285151ADAE6DC00D7C97E /* MCDetailViewController.xib in Resources */,
+				95B2851E1ADAEDF900D7C97E /* Localizable.strings in Resources */,
 				95C120FB1ABA534600704025 /* Images.xcassets in Resources */,
 				95DB89B81ACA62B100B8650E /* MCItemCell.xib in Resources */,
 			);
@@ -331,6 +337,16 @@
 				95B2851B1ADAE82B00D7C97E /* es-MX */,
 			);
 			name = MCDetailViewController.xib;
+			sourceTree = "<group>";
+		};
+		95B285201ADAEDF900D7C97E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95B2851F1ADAEDF900D7C97E /* es-MX */,
+				95B285211ADAEDFD00D7C97E /* en */,
+				95B285221ADAEDFE00D7C97E /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
