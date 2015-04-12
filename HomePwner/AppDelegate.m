@@ -10,12 +10,22 @@
 #import "MCItemsViewController.h"
 #import "MCItemStore.h"
 
+extern NSString * const MCNextItemValuePrefsKey = @"NextItemValue";
+extern NSString * const MCNextItemNamePrefsKey = @"NextItemName";
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
++ (void)initialize {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *factorySettings = @{MCNextItemValuePrefsKey : @75,
+                                      MCNextItemNamePrefsKey : @"Coffee Cup"};
+    [defaults registerDefaults:factorySettings];
+}
 
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
